@@ -1,15 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <nav className='container-nav'>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink
+            to='/'
+            exact={true}
+            className='btn-nav'
+            activeClassName='active'
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <NavLink to='/about' className='btn-nav' activeClassName='active'>
+            About
+          </NavLink>
         </li>
       </ul>
     </nav>

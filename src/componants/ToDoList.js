@@ -15,7 +15,7 @@ export default function ToDoList() {
   }, [toDo]);
 
   return (
-    <section>
+    <section className='section'>
       <h1>To Do List</h1>
       <h3>{taskNumber} Task to do</h3>
       <ToDoForm toDo={toDo} setToDo={setToDo} />

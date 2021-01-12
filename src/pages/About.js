@@ -2,9 +2,9 @@ import React from "react";
 
 export default function About() {
   return (
-    <div>
+    <section className='section'>
       <h2>About :</h2>
-      <p>First react project</p>
-    </div>
+      <p>This is my first project for learning React</p>
+    </section>
   );
 }

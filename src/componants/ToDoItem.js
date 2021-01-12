@@ -2,13 +2,13 @@ import React from "react";
 
 export default function ToDoItem({ toDo, handleDelete }) {
   if (toDo.length === 0) {
-    return <h3>There is no task to do ! you lazy piece of ***</h3>;
+    return <h3>There is no task to do ! you lazy potato</h3>;
   }
   return (
-    <div>
+    <>
       {toDo.map((item, index) => {
         return (
-          <div key={index}>
+          <div key={index} className='item'>
             <p>{item}</p>
             <button
               onClick={() => {
@@ -20,6 +20,6 @@ export default function ToDoItem({ toDo, handleDelete }) {
           </div>
         );
       })}
-    </div>
+    </>
   );
 }

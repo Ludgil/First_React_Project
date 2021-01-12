@@ -4,13 +4,16 @@ export default function ToDoForm({ toDo, setToDo }) {
   const [newToDo, setNewToDo] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    const addToDo = [newToDo, ...toDo];
-    setToDo(addToDo);
-    setNewToDo("");
+    if (newToDo) {
+      const addToDo = [newToDo, ...toDo];
+      setToDo(addToDo);
+      setNewToDo("");
+    }
+    return null;
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='form-control'>
         <label htmlFor='todo'>Add To do</label>
         <input
           type='text'
@@ -19,7 +22,7 @@ export default function ToDoForm({ toDo, setToDo }) {
           value={newToDo}
           onChange={(e) => setNewToDo(e.target.value)}
         />
-        <button type='submit'>Add to do</button>
+        <button type='submit'>Add</button>
       </form>
     </div>
   );
